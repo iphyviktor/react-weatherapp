@@ -53,6 +53,10 @@ h1{
   color: #fff;
 }
 
+.app input:focus{
+  outline: #f8f8f8;
+}
+
 ::placeholder{
   color: #f8f8f8;
 }
