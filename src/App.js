@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import 
 
 
 function App() {
@@ -7,8 +8,7 @@ function App() {
   const [data,setData] = useState({});
   const [location, setLocation] = useState('');
 
-  // const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=16951de20dc0359f68ccb907205a9b45`;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=16951de20dc0359f68ccb907205a9b45`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
 
   const searchLocation = (event) =>{
     if(event.key === 'Enter'){
